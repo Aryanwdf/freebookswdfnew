@@ -1,0 +1,56 @@
+#textInput {
+    border: none;
+    border-bottom: 3px solid aqua;
+}
+
+.userText {
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    text-align: right;
+    line-height: 30px;
+}
+.userText span {
+    background-color: #009688;
+    padding: 10px;
+    border-radius: 2px;
+}
+.botText {
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    text-align: left;
+    line-height: 30px;
+}
+.botText span {
+    background-color: #EF5350;
+    padding: 10px;
+    border-radius: 2px;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.8);   
+    background-image: url(../static/media/2560.jpg);
+    background-blend-mode: multiply;
+    color: white;
+}
+.bg{
+    height: 30vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url(../static/media/4102michael-mouritz-WXX_DhjlmD4-unsplash.jpg);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+nav{
+    background-color: royalblue;
+}
+nav a{
+    
+    color:rgb(255, 253, 255);
+    font-weight: bolder;
+    
+}
+nav a:hover{
+    background-color: royalblue;
+    color: white;
+}

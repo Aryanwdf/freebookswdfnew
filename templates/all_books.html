@@ -1,0 +1,57 @@
+{%extends 'layout.html'%}
+{%block content%}
+<style>
+  img{
+    width: 150px;
+    height: 150px;
+  }
+</style>
+{%if records%}
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope='col'>Book Image</th>
+            <th scope="col">Bookname</th>
+            <th scope="col">Description</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {%for record in records%}  
+          <tr>
+            <td>
+              {%if record[3].count('.')==0%}
+    
+              <img src="../static/media/default-book.jpg" alt="">
+              {%else%}
+
+              <img src={{record[3]}} alt="">
+              {%endif%}
+            </td>
+            <td style="padding-top: 60px;">{{record[1]}}</div></td>
+            <td><div style="width: 300px; padding-top: 50px;">{{record[2]}}</td>
+            {%if record[4] == 1%}
+            <td>
+                <p style="padding-top: 50px;"><a href="/request_for_rent/{{record[0]}}"><button style="background-color: lightgreen;"> Send request</button></a></p>
+              
+            </td>
+            {%elif record[4] == 3%}
+            <td>
+              <p style="padding-top: 60px; "><a href="" style="color: yellow;">Requested for rent</a></p>
+            </td>
+            {%else%}
+            <td style="color: red;padding-top: 60px;">Already Rented</td>
+            {%endif%}
+          </tr>
+          {%endfor%}
+        </tbody>  
+
+    </table>
+</div>
+{%else%}
+  <h3 style="text-align: center;">No Records Found</h3>
+{%endif%}
+
+{%endblock%}
